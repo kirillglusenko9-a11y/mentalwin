@@ -27,14 +27,8 @@
 
         /* ===== АНИМАЦИИ ===== */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         @keyframes pulse {
             0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(229, 57, 53, 0.7); }
@@ -50,10 +44,6 @@
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
-        @keyframes blinkCursor {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
 
         .fade-up {
             opacity: 0;
@@ -65,7 +55,6 @@
             transform: translateY(0);
         }
 
-        /* ===== ШАПКА ===== */
         header {
             background-color: #0D0D0D;
             border-bottom: 1px solid #333;
@@ -103,30 +92,15 @@
             cursor: pointer;
             font-size: 16px;
         }
-        nav a:hover, nav a.active {
-            color: #E53935;
-        }
+        nav a:hover, nav a.active { color: #E53935; }
         @media (max-width: 768px) {
-            .header-inner {
-                flex-direction: column;
-                gap: 12px;
-            }
-            nav ul {
-                justify-content: center;
-                gap: 16px;
-            }
+            .header-inner { flex-direction: column; gap: 12px; }
+            nav ul { justify-content: center; gap: 16px; }
         }
 
-        /* ===== СТРАНИЦЫ ===== */
-        .page {
-            display: none;
-            animation: fadeInUp 0.5s ease;
-        }
-        .page.active-page {
-            display: block;
-        }
+        .page { display: none; animation: fadeInUp 0.5s ease; }
+        .page.active-page { display: block; }
 
-        /* ===== КАРТОЧКИ С ЭФФЕКТОМ СТЕКЛА ===== */
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -146,22 +120,10 @@
             box-shadow: 0 20px 30px rgba(229, 57, 53, 0.2);
             border-color: #E53935;
         }
-        .card h3 {
-            color: #FFFFFF;
-            margin-bottom: 14px;
-            font-size: 24px;
-        }
-        .emoji-big {
-            font-size: 48px;
-            margin-bottom: 16px;
-            display: inline-block;
-            transition: transform 0.3s;
-        }
-        .card:hover .emoji-big {
-            animation: spinIcon 0.6s ease;
-        }
+        .card h3 { color: #FFFFFF; margin-bottom: 14px; font-size: 24px; }
+        .emoji-big { font-size: 48px; margin-bottom: 16px; display: inline-block; transition: transform 0.3s; }
+        .card:hover .emoji-big { animation: spinIcon 0.6s ease; }
 
-        /* ===== КНОПКИ ===== */
         .btn {
             display: inline-block;
             background-color: #E53935;
@@ -176,15 +138,9 @@
             cursor: pointer;
             font-size: 14px;
         }
-        .btn:hover {
-            background-color: #B71C1C;
-            transform: scale(1.02);
-        }
-        .btn-pulse {
-            animation: pulse 2s infinite;
-        }
+        .btn:hover { background-color: #B71C1C; transform: scale(1.02); }
+        .btn-pulse { animation: pulse 2s infinite; }
 
-        /* ===== ГЕРОЙ С АНИМАЦИЕЙ ФОНА ===== */
         .hero {
             text-align: center;
             padding: 70px 20px;
@@ -194,26 +150,10 @@
             border-radius: 30px;
             margin: 30px 0 60px;
         }
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #FFFFFF, #E53935, #F4B400);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        .hero p {
-            font-size: 20px;
-            color: #B0B0B0;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 32px; }
-            .hero p { font-size: 16px; }
-        }
+        .hero h1 { font-size: 48px; margin-bottom: 20px; background: linear-gradient(135deg, #FFFFFF, #E53935, #F4B400); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hero p { font-size: 20px; color: #B0B0B0; max-width: 700px; margin: 0 auto 30px; }
+        @media (max-width: 768px) { .hero h1 { font-size: 32px; } .hero p { font-size: 16px; } }
 
-        /* ===== ЦИТАТЫ ===== */
         .quote {
             background: rgba(42, 18, 18, 0.7);
             backdrop-filter: blur(8px);
@@ -223,21 +163,10 @@
             border-radius: 12px;
             transition: transform 0.3s;
         }
-        .quote:hover {
-            transform: translateX(8px);
-        }
-        .quote p {
-            font-style: italic;
-            font-size: 18px;
-        }
-        .quote cite {
-            display: block;
-            margin-top: 12px;
-            color: #E53935;
-            font-weight: bold;
-        }
+        .quote:hover { transform: translateX(8px); }
+        .quote p { font-style: italic; font-size: 18px; }
+        .quote cite { display: block; margin-top: 12px; color: #E53935; font-weight: bold; }
 
-        /* ===== СЧЁТЧИК ПОЛЬЗЫ ===== */
         .stats-grid {
             display: flex;
             justify-content: center;
@@ -253,19 +182,9 @@
             border-radius: 60px;
             border: 1px solid #E53935;
         }
-        .stat-number {
-            font-size: 48px;
-            font-weight: 800;
-            color: #E53935;
-            line-height: 1;
-        }
-        .stat-label {
-            font-size: 14px;
-            color: #B0B0B0;
-            margin-top: 8px;
-        }
+        .stat-number { font-size: 48px; font-weight: 800; color: #E53935; line-height: 1; }
+        .stat-label { font-size: 14px; color: #B0B0B0; margin-top: 8px; }
 
-        /* ===== ЧЕК-ЛИСТ ===== */
         .checklist {
             background: rgba(42, 18, 18, 0.7);
             backdrop-filter: blur(8px);
@@ -273,25 +192,11 @@
             padding: 24px;
             margin: 30px 0 50px;
         }
-        .checklist ul {
-            list-style: none;
-        }
-        .checklist li {
-            margin-bottom: 14px;
-        }
-        .checklist label {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            color: #E0E0E0;
-        }
-        .checklist input {
-            margin-right: 12px;
-            transform: scale(1.2);
-            accent-color: #E53935;
-        }
+        .checklist ul { list-style: none; }
+        .checklist li { margin-bottom: 14px; }
+        .checklist label { display: flex; align-items: center; cursor: pointer; color: #E0E0E0; }
+        .checklist input { margin-right: 12px; transform: scale(1.2); accent-color: #E53935; }
 
-        /* ===== КОМАНДА ===== */
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -307,10 +212,7 @@
             transition: transform 0.3s;
             border: 1px solid rgba(229, 57, 53, 0.3);
         }
-        .team-member:hover {
-            transform: translateY(-8px);
-            border-color: #E53935;
-        }
+        .team-member:hover { transform: translateY(-8px); border-color: #E53935; }
         .team-photo {
             width: 180px;
             height: 180px;
@@ -323,25 +225,11 @@
             overflow: hidden;
             border: 3px solid #E53935;
         }
-        .team-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .team-photo.empty {
-            background: #2A2A2A;
-        }
-        .team-member h4 {
-            color: #FFFFFF;
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-        .team-member p {
-            color: #B0B0B0;
-            font-size: 14px;
-        }
+        .team-photo img { width: 100%; height: 100%; object-fit: cover; }
+        .team-photo.empty { background: #2A2A2A; }
+        .team-member h4 { color: #FFFFFF; font-size: 22px; margin-bottom: 10px; }
+        .team-member p { color: #B0B0B0; font-size: 14px; }
 
-        /* ===== ПОДВАЛ ===== */
         footer {
             background-color: #0D0D0D;
             border-top: 1px solid #333;
@@ -350,38 +238,11 @@
             text-align: center;
             color: #666;
         }
-        footer a {
-            color: #E53935;
-            text-decoration: none;
-        }
-        h2 {
-            font-size: 32px;
-            margin: 48px 0 20px;
-            background: linear-gradient(135deg, #FFFFFF, #E53935);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            border-left: 4px solid #E53935;
-            padding-left: 16px;
-        }
-        h3 {
-            color: white;
-            margin: 28px 0 14px;
-        }
-        .download-link {
-            display: inline-block;
-            background-color: #E53935;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 10px;
-            transition: 0.2s;
-        }
-        .download-link:hover {
-            background-color: #B71C1C;
-        }
+        footer a { color: #E53935; text-decoration: none; }
+        h2 { font-size: 32px; margin: 48px 0 20px; background: linear-gradient(135deg, #FFFFFF, #E53935); -webkit-background-clip: text; background-clip: text; color: transparent; border-left: 4px solid #E53935; padding-left: 16px; }
+        h3 { color: white; margin: 28px 0 14px; }
+        .download-link { display: inline-block; background-color: #E53935; color: white; padding: 8px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 10px; transition: 0.2s; }
+        .download-link:hover { background-color: #B71C1C; }
     </style>
 </head>
 <body>
@@ -402,7 +263,7 @@
 </header>
 
 <main class="container">
-    <!-- ГЛАВНАЯ -->
+    <!-- ГЛАВНАЯ (полная версия) -->
     <div id="home" class="page active-page">
         <div class="hero">
             <h1>Твой психологический тренер в единоборствах</h1>
@@ -410,166 +271,101 @@
             <a href="#" class="btn btn-pulse" onclick="switchPage('preparation'); return false;">⚡ Начать подготовку ⚡</a>
         </div>
 
-        <!-- Счётчик пользы -->
         <div class="stats-grid fade-up">
-            <div class="stat-item">
-                <div class="stat-number">85%</div>
-                <div class="stat-label">спортсменов снизили стресс</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">юных бойцов уже используют</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">доступно бесплатно</div>
-            </div>
+            <div class="stat-item"><div class="stat-number">85%</div><div class="stat-label">спортсменов снизили стресс</div></div>
+            <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">юных бойцов уже используют</div></div>
+            <div class="stat-item"><div class="stat-number">24/7</div><div class="stat-label">доступно бесплатно</div></div>
         </div>
 
         <h2 class="fade-up">Кому и зачем?</h2>
         <div class="card-grid">
-            <div class="card fade-up">
-                <div class="emoji-big">🔥</div>
-                <h3>Для спортсменов 10–16 лет</h3>
-                <p>Боишься пропустить удар, волнуешься перед выходом? Мы собрали рабочие техники от спортивных психологов.</p>
-            </div>
-            <div class="card fade-up">
-                <div class="emoji-big">⚔️</div>
-                <h3>Для всех единоборств</h3>
-                <p>Бокс, дзюдо, карате, тхэквондо, самбо, кикбоксинг, MMA — проблемы у всех одинаковые.</p>
-            </div>
-            <div class="card fade-up">
-                <div class="emoji-big">🥋</div>
-                <h3>Бесплатно и без регистрации</h3>
-                <p>Всё, что нужно, — открыть сайт на телефоне. Дыхательные упражнения, чек-листы, аффирмации — в один клик.</p>
-            </div>
+            <div class="card fade-up"><div class="emoji-big">🔥</div><h3>Для спортсменов 10–16 лет</h3><p>Боишься пропустить удар, волнуешься перед выходом или не знаешь, как настроиться после поражения? Мы собрали рабочие техники от спортивных психологов.</p></div>
+            <div class="card fade-up"><div class="emoji-big">⚔️</div><h3>Для всех единоборств</h3><p>Бокс, дзюдо, карате, тхэквондо, самбо, кикбоксинг, MMA — проблемы у всех одинаковые. Наши упражнения подходят любому бойцу.</p></div>
+            <div class="card fade-up"><div class="emoji-big">🥋</div><h3>Бесплатно и без регистрации</h3><p>Всё, что нужно, — открыть сайт на телефоне. Дыхательные упражнения, чек-листы, аффирмации — доступны в один клик.</p></div>
         </div>
 
         <h2 class="fade-up">Что внутри?</h2>
         <div class="card-grid">
-            <div class="card fade-up">
-                <h3>🔥 Мотивация</h3>
-                <p>Аффирмации, цитаты чемпионов, дневник побед.</p>
-                <a href="#" class="btn" onclick="switchPage('motivation'); return false;">Перейти</a>
-            </div>
-            <div class="card fade-up">
-                <h3>⚔️ Подготовка к соревнованиям</h3>
-                <p>Дыхание «Квадрат», визуализация, чек-лист.</p>
-                <a href="#" class="btn" onclick="switchPage('preparation'); return false;">Перейти</a>
-            </div>
-            <div class="card fade-up">
-                <h3>🥋 Тренировки</h3>
-                <p>Как не бояться спарринга, концентрация, цели.</p>
-                <a href="#" class="btn" onclick="switchPage('training'); return false;">Перейти</a>
-            </div>
+            <div class="card fade-up"><h3>🔥 Мотивация</h3><p>Аффирмации, цитаты чемпионов, дневник побед. Настрой себя на успех.</p><a href="#" class="btn" onclick="switchPage('motivation'); return false;">Перейти</a></div>
+            <div class="card fade-up"><h3>⚔️ Подготовка к соревнованиям</h3><p>Дыхание «Квадрат», визуализация боя, чек-лист экипировки. Снизь стресс за 5 минут.</p><a href="#" class="btn" onclick="switchPage('preparation'); return false;">Перейти</a></div>
+            <div class="card fade-up"><h3>🥋 Тренировки</h3><p>Как не бояться спарринга, концентрация внимания, постановка целей. Прокачай психику.</p><a href="#" class="btn" onclick="switchPage('training'); return false;">Перейти</a></div>
         </div>
 
         <h2 class="fade-up">Попробуй прямо сейчас — дыхание за 1 минуту</h2>
-        <div class="card fade-up" style="text-align:center; margin-bottom: 48px;">
-            <p style="font-size:20px;"><strong>Квадратное дыхание</strong> помогает успокоиться.</p>
-            <p style="font-size:24px; margin:24px 0;">Вдох (4) → Задержка (4) → Выдох (4) → Задержка (4)</p>
-            <a href="#" class="btn" onclick="switchPage('preparation'); return false;">Больше техник в «Подготовке»</a>
-        </div>
+        <div class="card fade-up" style="text-align:center; margin-bottom: 48px;"><p style="font-size:20px;"><strong>Квадратное дыхание</strong> помогает успокоиться за несколько циклов.</p><p style="font-size:24px; margin:24px 0;">Вдох (4) → Задержка (4) → Выдох (4) → Задержка (4)</p><p>Повтори 3–5 раз.</p><a href="#" class="btn" onclick="switchPage('preparation'); return false;">Больше техник в разделе «Подготовка»</a></div>
 
         <h2 class="fade-up">Что говорят спортсмены?</h2>
-        <div class="quote fade-up">
-            <p>«Дыхательные упражнения реально помогли успокоиться перед боем»</p>
-            <cite>— Андрей, 14 лет, бокс</cite>
-        </div>
-        <div class="quote fade-up">
-            <p>«Теперь представляю бой до выхода — это работает!»</p>
-            <cite>— Карина, 15 лет, тхэквондо</cite>
-        </div>
+        <div class="quote fade-up"><p>«Я постоянно нервничал перед соревнованиями, а дыхательные упражнения реально помогли успокоиться»</p><cite>— Андрей, 14 лет, бокс</cite></div>
+        <div class="quote fade-up"><p>«Сайт ещё в разработке, но уже понял: мне не хватало визуализации. Теперь представляю бой до выхода»</p><cite>— Карина, 15 лет, тхэквондо</cite></div>
+        <p class="text-muted">📊 По данным нашего опроса, 85% юных спортсменов испытывают сильное волнение перед стартом.</p>
     </div>
 
-    <!-- О ПРОЕКТЕ -->
+    <!-- О ПРОЕКТЕ (полная версия) -->
     <div id="about" class="page">
         <h2 class="fade-up">О проекте MentalWin</h2>
-        <p class="fade-up">Мы создали этот сайт, чтобы помочь юным бойцам справляться с соревновательным стрессом.</p>
-        
+        <p class="fade-up">Мы создали этот сайт, чтобы помочь юным бойцам справляться с соревновательным стрессом и раскрывать свой потенциал.</p>
         <h3 class="fade-up">Актуальность</h3>
-        <p class="fade-up">До 85% спортсменов сталкиваются со стрессом, но в спортивных школах редко учат управлять состоянием. MentalWin закрывает этот пробел.</p>
-        
+        <p class="fade-up">Каждый юный спортсмен-единоборец хотя бы раз испытывал сильное волнение перед соревнованиями. Страх пропустить удар, потерять концентрацию — знакомые чувства. До 85% спортсменов сталкиваются со стрессом, но в спортивных школах редко учат управлять состоянием. MentalWin закрывает этот пробел.</p>
         <h3 class="fade-up">Цель и задачи</h3>
         <p class="fade-up"><strong>Цель:</strong> Разработать сайт для психологической подготовки юных спортсменов-единоборцев.</p>
-        
+        <ul><li>Изучить психологические трудности юных бойцов</li><li>Собрать эффективные техники (дыхание, визуализация, аффирмации)</li><li>Создать удобный сайт с доступом к ним</li><li>Проверить, помогает ли сайт справляться с волнением</li></ul>
+        <h3 class="fade-up">Для кого этот сайт?</h3>
+        <ul><li>🥊 Юные спортсмены 10–16 лет</li><li>🥋 Тренеры для работы с командой</li><li>👨‍👩‍👧 Родители для поддержки детей</li></ul>
+        <p>Сайт подходит для любых единоборств: бокс, дзюдо, карате, тхэквондо, самбо, кикбоксинг, MMA и другие.</p>
         <h3 class="fade-up">Команда проекта</h3>
         <div class="team-grid">
-            <div class="team-member fade-up">
-                <div class="team-photo empty"></div>
-                <h4>Глущенко Кирилл</h4>
-                <p>Создание сайта, дизайн</p>
-            </div>
-            <div class="team-member fade-up">
-                <div class="team-photo empty"></div>
-                <h4>Огурцова Мария</h4>
-                <p>Планирование, координация</p>
-            </div>
-            <div class="team-member fade-up">
-                <div class="team-photo empty"></div>
-                <h4>Верхозина Анна</h4>
-                <p>Поиск информации, опросы</p>
-            </div>
-            <div class="team-member fade-up">
-                <div class="team-photo empty"></div>
-                <h4>Магомедов Али</h4>
-                <p>Презентация, аналитика</p>
-            </div>
+            <div class="team-member fade-up"><div class="team-photo empty"></div><h4>Глущенко Кирилл</h4><p>Создание сайта, продумывание дизайна</p></div>
+            <div class="team-member fade-up"><div class="team-photo empty"></div><h4>Огурцова Мария</h4><p>Планирование проекта, распределение обязанностей</p></div>
+            <div class="team-member fade-up"><div class="team-photo empty"></div><h4>Верхозина Анна</h4><p>Поиск информации, анкетирование</p></div>
+            <div class="team-member fade-up"><div class="team-photo empty"></div><h4>Магомедов Али</h4><p>Продумывание и реализация презентации</p></div>
         </div>
+        <p><em>Проект разработан командой энтузиастов спортивной психологии.</em></p>
+        <h3 class="fade-up">Продукт проекта</h3>
+        <p>Сайт включает разделы: Мотивация, Подготовка к соревнованиям, Тренировки, а также интерактивный чек-лист и дыхательные упражнения.</p>
     </div>
 
-    <!-- МОТИВАЦИЯ -->
+    <!-- МОТИВАЦИЯ (полная версия) -->
     <div id="motivation" class="page">
         <h2 class="fade-up">Мотивация для бойца</h2>
         <p class="fade-up">Настрой себя на победу. Аффирмации, цитаты чемпионов и дневник успеха.</p>
-
-        <h3 class="fade-up">Аффирмации</h3>
-        <ul class="fade-up">
-            <li>Я спокоен и уверен в себе.</li>
-            <li>Мои удары точны и сильны.</li>
-            <li>Я контролирую свой страх.</li>
-            <li>Каждая тренировка делает меня сильнее.</li>
-        </ul>
-
+        <h3 class="fade-up">Аффирмации — сила твоих слов</h3>
+        <p>Короткие фразы, которые заменяют негативные установки. Повторяй каждый день перед зеркалом.</p>
+        <ul><li>Я спокоен и уверен в себе.</li><li>Мои удары точны и сильны.</li><li>Я контролирую свой страх — страх не контролирует меня.</li><li>Каждая тренировка делает меня сильнее.</li><li>Я достоин победы.</li><li>Мой дух не сломить.</li><li>Я вижу цель и достигаю её.</li><li>Я готов к любому вызову.</li></ul>
         <h3 class="fade-up">Цитаты чемпионов</h3>
-        <div class="quote fade-up"><p>«Страх — это топливо. Ты либо используешь его, либо он сжигает тебя.»</p><cite>— Конор Макгрегор</cite></div>
-        <div class="quote fade-up"><p>«Чемпионом становится не тот, кто никогда не падал, а тот, кто вставал.»</p><cite>— Майк Тайсон</cite></div>
-
+        <div class="quote fade-up"><p>«Страх — это не враг. Это топливо. Ты либо используешь его, либо он сжигает тебя.»</p><cite>— Конор Макгрегор</cite></div>
+        <div class="quote fade-up"><p>«Чемпионом становится не тот, кто никогда не падал, а тот, кто каждый раз вставал.»</p><cite>— Майк Тайсон</cite></div>
+        <div class="quote fade-up"><p>«Победа не главное. Главное — стать лучше, чем ты был вчера.»</p><cite>— Хабиб Нурмагомедов</cite></div>
+        <div class="quote fade-up"><p>«Настоящий боец держит удар не телом, а духом.»</p><cite>— Фёдор Емельяненко</cite></div>
+        <div class="quote fade-up"><p>«Неважно, как сильно ты ударил. Важно, как сильно ты можешь ударить и при этом продолжить идти.»</p><cite>— Сильвестр Сталлоне (Рокки)</cite></div>
         <h3 class="fade-up">Дневник побед</h3>
-        <div class="card fade-up">
-            <p>Каждый день записывай 3 вещи, которые получились хорошо.</p>
-            <a href="diary-template.pdf" download class="download-link">📥 Скачать шаблон дневника (PDF)</a>
-        </div>
+        <p>Каждый день записывай 3 вещи, которые получились хорошо. Это укрепит веру в себя.</p>
+        <div class="card fade-up"><p><strong>Пример:</strong></p><ul><li>15.04 — Чётко отработал связку → 8/10</li><li>16.04 — Не боялся идти в атаку на спарринге → 9/10</li></ul><a href="#" class="download-link">📥 Скачать шаблон дневника (PDF)</a></div>
     </div>
 
-    <!-- ПОДГОТОВКА -->
+    <!-- ПОДГОТОВКА (полная версия) -->
     <div id="preparation" class="page">
         <h2 class="fade-up">Подготовка к соревнованиям</h2>
-        <div class="checklist fade-up">
-            <h3 style="color:white;">🥋 Чек-лист экипировки</h3>
-            <ul>
-                <li><label><input type="checkbox"> Добок / форма</label></li>
-                <li><label><input type="checkbox"> Шлем, перчатки, капа</label></li>
-                <li><label><input type="checkbox"> Бандаж, щитки, бинты</label></li>
-                <li><label><input type="checkbox"> Вода, перекус, документы</label></li>
-            </ul>
-        </div>
-
+        <p class="fade-up">Снизь стресс, настройся на бой и выложись на 100%.</p>
+        <div class="checklist fade-up"><h3 style="color:white;">🥋 Чек-лист: что взять на соревнования</h3><p style="color:#B0B0B0;">Поставь галочки — и будь спокоен!</p><ul><li><label><input type="checkbox"> Добок / форма (чистый)</label></li><li><label><input type="checkbox"> Шлем</label></li><li><label><input type="checkbox"> Перчатки</label></li><li><label><input type="checkbox"> Капа</label></li><li><label><input type="checkbox"> Бандаж</label></li><li><label><input type="checkbox"> Щитки на ноги</label></li><li><label><input type="checkbox"> Бинты для рук</label></li><li><label><input type="checkbox"> Сменка и форма для разминки</label></li><li><label><input type="checkbox"> Вода</label></li><li><label><input type="checkbox"> Перекус (банан, шоколад)</label></li><li><label><input type="checkbox"> Документы (паспорт, допуск)</label></li><li><label><input type="checkbox"> Полотенце, сменная футболка</label></li><li><label><input type="checkbox"> Аптечка (пластырь, бинт)</label></li></ul><p style="color:#F4B400;">✅ Сохрани страницу в закладки — возвращайся перед каждым стартом!</p></div>
         <h3 class="fade-up">Дыхательные упражнения</h3>
-        <div class="card fade-up"><h3>Квадратное дыхание</h3><p>Вдох (4) → Задержка (4) → Выдох (4) → Задержка (4)</p></div>
-        <div class="card fade-up"><h3>Боевое дыхание</h3><p>Резкий вдох носом → выдох «ХА»</p></div>
-
-        <h3 class="fade-up">Что делать после поражения</h3>
-        <div class="card fade-up"><p>1. Успокойся. 2. Прими поражение. 3. Найди ошибки и успехи. 4. Поблагодари соперника. 5. Переключись.</p></div>
+        <div class="card fade-up"><h3>Квадратное дыхание (успокоение)</h3><p>Вдох (4) → Задержка (4) → Выдох (4) → Задержка (4). Повтори 5–10 раз.</p></div>
+        <div class="card fade-up"><h3>Боевое дыхание (мобилизация)</h3><p>Резкий вдох носом → мощный выдох ртом «ХА». 5–7 раз перед выходом.</p></div>
+        <h3 class="fade-up">Визуализация боя</h3><div class="card fade-up"><p>Закрой глаза, представь зал, соперника, свои уверенные действия и победу. Делай за день до старта и утром.</p></div>
+        <h3 class="fade-up">Психологическая разминка за 5 минут до выхода</h3><ul><li>1 мин: Квадратное дыхание</li><li>1 мин: Боевое дыхание</li><li>1 мин: Аффирмации («Я готов», «Я сильнее страха»)</li><li>1 мин: Лёгкая растяжка + улыбка</li><li>1 мин: Визуализация первого удара</li></ul>
+        <h3 class="fade-up">Что делать после поражения</h3><div class="card fade-up"><p>1. Успокойся (вода, дыхание).<br>2. Прими поражение — это опыт.<br>3. Найди 2 ошибки и 2 успеха.<br>4. Поблагодари соперника и тренера.<br>5. Переключись на отдых.</p><p>Поражения есть у всех. Чемпион встаёт и идёт дальше.</p></div>
     </div>
 
-    <!-- ТРЕНИРОВКИ -->
+    <!-- ТРЕНИРОВКИ (расширенная версия) -->
     <div id="training" class="page">
         <h2 class="fade-up">Тренировки</h2>
-        <div class="card fade-up"><h3>🎯 Постановка целей по SMART</h3><p>Конкретная, измеримая, достижимая, релевантная, ограниченная по времени цель.</p></div>
-        <div class="card fade-up"><h3>🧘 Концентрация внимания</h3><p>Упражнение «Точка» — смотри на точку 30 секунд, не отвлекаясь.</p></div>
-        <div class="card fade-up"><h3>😨 Как не бояться спарринга</h3><p>Назови страх → оцени риск → переключись на действия → дыши.</p></div>
-        <div class="card fade-up"><h3>🧠 Идеомоторная тренировка</h3><p>Мысленно выполняй движения — мозг запоминает.</p></div>
+        <p class="fade-up">Прокачай не только тело, но и психику. Упражнения на концентрацию, борьбу со страхом, постановку целей и работу с усталостью.</p>
+        <div class="card fade-up"><h3>🎯 Постановка целей по SMART</h3><p>Цель должна быть <strong>конкретной, измеримой, достижимой, релевантной и ограниченной по времени</strong>.</p><p><strong>Плохая цель:</strong> «Хочу лучше бить ногами».</p><p><strong>Хорошая цель:</strong> «За ближайшие 2 недели на каждой тренировке отработаю маваши-гери 20 раз на правую ногу и 20 раз на левую, добиваясь точности попадания по лапе».</p><p>Записывай цели на неделю и отмечай выполнение.</p></div>
+        <div class="card fade-up"><h3>🧘 Концентрация внимания</h3><p><strong>Упражнение «Точка»:</strong> Нарисуй на стене точку или приклей стикер. Сядь напротив, смотри на точку 30 секунд, стараясь не моргать и не отвлекаться. Постепенно доводи время до 2 минут. Это тренирует устойчивость внимания перед боем.</p><p><strong>Упражнение «Счёт ударов»:</strong> На спарринге сосредоточься только на одном — считай, сколько ударов ты нанёс за раунд. Это помогает не отвлекаться на эмоции.</p></div>
+        <div class="card fade-up"><h3>😨 Как не бояться спарринга</h3><p>Страх — это естественная реакция. Вот пошаговая техника укрощения страха:</p><ol><li><strong>Назови страх:</strong> «Я боюсь пропустить сильный удар».</li><li><strong>Оцени риск реально:</strong> У тебя есть защита, капа, шлем? Ты не на войне — это тренировка.</li><li><strong>Переведи внимание на действия:</strong> Вместо «что будет, если…» думай «какое движение я сделаю сейчас».</li><li><strong>Дыши как боец:</strong> 3 коротких вдоха + сильный выдох — и в бой.</li></ol><p>Начинай спарринг с теми, кто немного слабее, чтобы почувствовать уверенность. Потом постепенно повышай уровень.</p></div>
+        <div class="card fade-up"><h3>⚡ Работа с усталостью (аутогенная тренировка)</h3><p>Между раундами или интенсивными упражнениями используй быструю релаксацию:</p><ol><li>Сядь, закрой глаза. Сделай 3 глубоких вдоха.</li><li>Мысленно скажи: «Мои руки тяжёлые и тёплые», «Мои ноги расслаблены», «Я восстанавливаюсь».</li><li>Повтори каждую фразу 2-3 раза.</li><li>Через 30-60 секунд открой глаза и сделай резкий выдох — готов двигаться дальше.</li></ol><p>Это снижает пульс и возвращает ясность мышления.</p></div>
+        <div class="card fade-up"><h3>📈 Дневник тренировок</h3><p>Записывай после каждой тренировки:</p><ul><li><strong>Дата, вид тренировки</strong> (ОФП, спарринги, техника)</li><li><strong>Что получилось лучше всего</strong> (даже мелочь)</li><li><strong>Над чем нужно поработать</strong> (1-2 пункта)</li><li><strong>Оценка настроения/энергии</strong> от 1 до 10</li></ul><p>Пример: <em>«15.05 – спарринг. Хорошо сделал защиту уклоном. Плохо — мало джебов. Настроение 7/10».</em></p><p>Регулярные записи помогают видеть прогресс и не зацикливаться на неудачах.</p></div>
+        <div class="card fade-up"><h3>🧠 Идеомоторная тренировка (мысленная подготовка дома)</h3><p>Ты можешь тренироваться даже лёжа на диване. Закрой глаза и мысленно выполняй движения: удар, блок, перемещение. Представляй каждую деталь — напряжение мышц, траекторию, контакт с целью. 5–10 минут такой тренировки улучшают реальную технику.</p><p><em>Проверено исследованиями: мозг не отличает реальное действие от воображаемого.</em></p></div>
+        <div class="card fade-up"><h3>🔄 Разминка психики перед тренировкой</h3><p>Перед выходом в зал выполни ритуал:</p><ul><li>1 минута — боевое дыхание (вдох носом, резкий выдох «ХА»)</li><li>1 минута — повторение 2-3 аффирмаций («Я становлюсь сильнее», «Я концентрируюсь»)</li><li>1 минута — лёгкая растяжка шеи и плеч</li></ul><p>Это переключит мозг в режим работы.</p></div>
     </div>
 </main>
 
@@ -577,12 +373,11 @@
     <div class="container">
         <p>© 2025 MentalWin — психологическая подготовка юных бойцов</p>
         <p>Проект команды: Глущенко Кирилл, Огурцова Мария, Верхозина Анна, Магомедов Али</p>
-        <p><a href="project-passport.pdf" download>📄 Паспорт проекта (PDF)</a> | <a href="methodical-recommendations.pdf" download>📘 Методические рекомендации (PDF)</a></p>
+        <p><a href="#">📄 Паспорт проекта (PDF)</a> | <a href="#">📘 Методические рекомендации (PDF)</a></p>
     </div>
 </footer>
 
 <script>
-    // Переключение страниц
     function switchPage(pageId) {
         document.querySelectorAll('.page').forEach(page => page.classList.remove('active-page'));
         document.getElementById(pageId).classList.add('active-page');
@@ -592,24 +387,5 @@
         });
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-
     document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            switchPage(link.getAttribute('data-page'));
-        });
-    });
-
-    // Анимация при прокрутке
-    const fadeElements = document.querySelectorAll('.fade-up');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add('visible');
-        });
-    }, { threshold: 0.1 });
-    fadeElements.forEach(el => observer.observe(el));
-
-    if (window.location.hash) switchPage(window.location.hash.substring(1));
-</script>
-</body>
-</html>
+        link.addEventListener('
